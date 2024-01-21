@@ -1,0 +1,26 @@
+
+  <div class="container">
+    <img src="your-logo.png" alt="Logo" class="logo">
+    <form *ngIf="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+      <div *ngIf="loginForm.get('username')">
+        <label for="username">Username:</label>
+        <input type="text" id="username" formControlName="username" />
+        <div *ngIf="loginForm.get('username')!.invalid && loginForm.get('username')!.touched" class="error-message">
+          Username is required.
+        </div>
+      </div>
+
+      <div *ngIf="loginForm.get('password')">
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password" />
+        <div *ngIf="loginForm.get('password')!.invalid && loginForm.get('password')!.touched" class="error-message">
+          Password is required and must be at least 8 characters.
+        </div>
+      </div>
+      <button type="submit" [disabled]="loginForm.invalid" class="submit-button">Login</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2023 Your Company. All rights reserved.</p>
+  </footer>

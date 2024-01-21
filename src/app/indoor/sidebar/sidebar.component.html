@@ -1,0 +1,33 @@
+<!-- app-sidebar.component.html -->
+<div class="sidebar">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="path/to/logo.png" alt="Logo">
+    </div>
+  
+    <!-- Sections -->
+    <div class="section">
+      <p>Static Data</p>
+      <button (click)="navigateTo('static-data')">Go to Static Data</button>
+    </div>
+  
+    <div class="section">
+      <p>Clients</p>
+      <button (click)="navigateTo('parents')">Go to Parents</button>
+      <button (click)="navigateTo('clients')">Go to therapists</button>
+      <button (click)="navigateTo('clients')">Go to schools</button>
+
+
+    </div>
+  
+    <div class="section">
+      <p>Games</p>
+      <button (click)="navigateTo('games')">Go to Games</button>
+    </div>
+  
+    <!-- Disconnect Button -->
+    <div class="disconnect">
+      <button (click)="disconnect()">Disconnect</button>
+    </div>
+  </div>
+  

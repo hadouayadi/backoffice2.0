@@ -1,0 +1,22 @@
+/* app-sidebar.component.css */
+.sidebar {
+  height: 100%;
+  width: 200px;
+  background-color: #333; /* Dark grey background */
+  color: #fff; /* White text color */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.logo img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.section p {
+  margin-bottom: 10px;
+}
+
+.disconnect button {
+  background-color: #4285f4; /* Blue color for disconnect button */
+}

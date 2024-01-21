@@ -1,0 +1,35 @@
+<!-- user-table.component.html -->
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let user">{{ user.name }}</td>
+      </ng-container>
+  
+      <!-- Phone Number Column -->
+      <ng-container matColumnDef="phoneNumber">
+        <th mat-header-cell *matHeaderCellDef>Phone Number</th>
+        <td mat-cell *matCellDef="let user">{{ user.phoneNumber }}</td>
+      </ng-container>
+  
+      <!-- Date of Entry Column -->
+      <ng-container matColumnDef="dateOfEntry">
+        <th mat-header-cell *matHeaderCellDef>Date of Entry</th>
+        <td mat-cell *matCellDef="let user">{{ user.dateOfEntry | date}}</td>
+      </ng-container>
+  
+      <!-- More Details Column -->
+      <ng-container matColumnDef="moreDetails">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let user">
+          <button mat-button (click)="showDetails(user)">More Details</button>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  
